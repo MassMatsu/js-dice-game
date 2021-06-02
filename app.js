@@ -5,6 +5,7 @@ const currentScore2 = document.getElementById('current--1')
 const dice = document.querySelector('.dice')
 const modal = document.querySelector('.modal')
 const overlay = document.querySelector('.overlay')
+const winner = document.querySelector('.winner')
 
 const players = [...document.querySelectorAll('.player')]
 const scores = [score1, score2]
@@ -14,6 +15,7 @@ let activePlayer = 0
 let diceNum = null
 let currentScore = 0
 let score = [0, 0]
+
 
 function reset() {
   activePlayer = 0
@@ -38,6 +40,7 @@ function switchPlayer() {
 function rollDice() {
   diceNum = Math.floor(Math.random() * 6) + 1 
   dice.src = `./images/dice-${diceNum}.png`
+  dice.classList.remove('hidden')
 }
 
 function displayCurrent() {
@@ -62,6 +65,7 @@ function displayScore() {
 }
 
 function openModal() {
+  winner.textContent = `Player ${activePlayer + 1}`
   modal.classList.remove('hidden')
   overlay.classList.remove('hidden')
 }
@@ -88,4 +92,6 @@ document.querySelector('.btn--hold').addEventListener('click', () => {
 document.querySelector('.modal-close').addEventListener('click', () => {
   modal.classList.add('hidden')
   overlay.classList.add('hidden')
+  dice.classList.add('hidden')
+  reset()
 })

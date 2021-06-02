@@ -27,7 +27,7 @@
         </div>
       </section>
 
-      <img src="./images/dice-4.png" alt="playing dice" class="dice" />
+      <img src="./images/dice-4.png" alt="playing dice" class="dice hidden" />
       <button class="btn btn--new">New Game</button>
       <button class="btn btn--roll">Roll Dice</button>
       <button class="btn btn--hold">Hold score</button>
@@ -35,12 +35,12 @@
 
     <!-- modal -->
     <div class="modal hidden">
-      <p><span>Player 1</span></p>
+      <p><span class="winner">Player 1</span></p>
       <p>is the winner!</p>
       <button class="modal-close">play again</button>
     </div>
     <div class="overlay hidden"></div>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app-sub.js"></script>
   </body>
 </html>
