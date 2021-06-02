@@ -106,7 +106,7 @@ main {
     align-items: flex-end;
   }
   .player {
-    padding: 3rem
+    padding: 6rem 3rem
   }
   .name {
     font-size: 2.5rem;
@@ -116,6 +116,15 @@ main {
   }
   .current {
     width: 90%;
+  }
+  .btn.btn--new{
+    font-size: 1rem;
+  }
+  .btn.btn--roll{
+    font-size: 1rem;
+  }
+  .btn.btn--hold{
+    font-size: 1rem;
   }
 }
 
